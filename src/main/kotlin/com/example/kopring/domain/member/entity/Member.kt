@@ -1,4 +1,4 @@
-package com.example.kopring.entity
+package com.example.kopring.domain.member.entity
 
 import javax.persistence.Column
 import javax.persistence.Entity
@@ -8,6 +8,7 @@ import javax.persistence.Id
 
 @Entity
 class Member(
+        id: Int?,
         name: String,
         age: Int,
         password: String
