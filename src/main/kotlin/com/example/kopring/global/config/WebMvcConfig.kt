@@ -1,4 +1,4 @@
-package com.example.kopring.global.security
+package com.example.kopring.global.config
 
 import org.springframework.context.annotation.Configuration
 import org.springframework.web.servlet.config.annotation.CorsRegistry
