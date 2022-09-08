@@ -1,10 +1,10 @@
 package com.example.kopring.domain.member.service
 
-import com.example.kopring.domain.dto.MessageResponse
-import com.example.kopring.domain.member.controller.dto.request.CreateMemberRequest
-import com.example.kopring.domain.member.entity.Member
-import com.example.kopring.domain.member.entity.MemberRepository
-import com.example.kopring.global.error.exception.DuplicateMemberException
+import com.example.kopring.global.common.MessageResponse
+import com.example.kopring.domain.member.dto.CreateMemberRequest
+import com.example.kopring.domain.member.Member
+import com.example.kopring.domain.member.MemberRepository
+import com.example.kopring.domain.member.exception.DuplicateMemberException
 import org.springframework.security.crypto.password.PasswordEncoder
 import org.springframework.stereotype.Service
 
@@ -15,12 +15,14 @@ class MemberServiceImpl(private val memberRepository: MemberRepository,
         if(memberRepository.existsByName(request.name)){
             throw DuplicateMemberException.Exception
         }
-        memberRepository.save(Member(
+        memberRepository.save(
+            Member(
             id = null,
             name = request.name,
             age = request.age,
             password = passwordEncoder.encode(request.password)
-        ))
+        )
+        )
         return MessageResponse(
             message = "회원가입 완료"
         )

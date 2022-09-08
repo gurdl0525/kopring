@@ -1,4 +1,4 @@
-package com.example.kopring.domain.member.controller.dto.request
+package com.example.kopring.domain.member.dto
 
 data class CreateMemberRequest(
     val age: Int,
