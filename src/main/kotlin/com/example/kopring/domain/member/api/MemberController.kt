@@ -1,7 +1,7 @@
 package com.example.kopring.domain.member.api
 
 import com.example.kopring.global.common.MessageResponse
-import com.example.kopring.domain.member.dto.request.CreateMemberRequest
+import com.example.kopring.domain.member.dto.CreateMemberRequest
 import com.example.kopring.domain.member.service.MemberService
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody

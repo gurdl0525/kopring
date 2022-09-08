@@ -1,7 +1,7 @@
 package com.example.kopring.domain.member.service
 
 import com.example.kopring.global.common.MessageResponse
-import com.example.kopring.domain.member.dto.request.CreateMemberRequest
+import com.example.kopring.domain.member.dto.CreateMemberRequest
 import com.example.kopring.domain.member.Member
 import com.example.kopring.domain.member.MemberRepository
 import com.example.kopring.domain.member.exception.DuplicateMemberException
