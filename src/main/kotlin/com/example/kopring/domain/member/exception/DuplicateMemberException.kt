@@ -1,4 +1,4 @@
-package com.example.kopring.global.error.exception
+package com.example.kopring.domain.member.exception
 
 import BaseException
 import com.example.kopring.global.error.ErrorCode
