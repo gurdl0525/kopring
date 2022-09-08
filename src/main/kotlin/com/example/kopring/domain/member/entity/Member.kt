@@ -17,15 +17,19 @@ class Member(
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Int? = null
+    var id: Int? = id
+        private set
 
     @Column(name = "member_name", length = 5, nullable = false)
     var name = name
+        private set
 
     @Column(name = "member_age", nullable = false)
     var age = age
+        private set
 
     @Column(name = "member_password", length = 60, nullable = false)
     var password = password
+        private set
 
 }
