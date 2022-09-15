@@ -17,14 +17,34 @@ repositories {
 }
 
 dependencies {
+
+    //spring data jpa
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+    //spring security
     implementation("org.springframework.boot:spring-boot-starter-security")
+
+    //validation
     implementation("org.springframework.boot:spring-boot-starter-validation")
+
+    //spring boot
     implementation("org.springframework.boot:spring-boot-starter-web")
+
+    //kotlin
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+    // jwt
+    implementation("io.jsonwebtoken:jjwt:0.9.1")
+
+    // redis
+    implementation("org.springframework.boot:spring-boot-starter-data-redis")
+
+    //mysql
     runtimeOnly("mysql:mysql-connector-java")
+
+    //test
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.springframework.security:spring-security-test")
 }
@@ -38,4 +58,8 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
     useJUnitPlatform()
+}
+
+allOpen{
+    annotation("javax.persistence.Entity")
 }
