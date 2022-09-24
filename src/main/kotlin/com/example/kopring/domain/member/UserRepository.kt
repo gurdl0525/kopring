@@ -4,6 +4,6 @@ import org.springframework.data.repository.CrudRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface MemberRepository: CrudRepository<Member, Int> {
+interface UserRepository: CrudRepository<User, Int> {
     fun existsByName(name: String): Boolean
 }
